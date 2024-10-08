@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-6</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "rgb(14, 122, 129);",
+              text1: " rgb(19, 19, 19)",
+              text2: "rgba(19, 19, 19, 0.7);",
+              text3: " rgba(255, 255, 255, 0.6);",
+            },
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/1be1fc140b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <body class="font-lato">
+    <!-- header section start here  -->
+  <header class="container mx-auto">
+    <nav>
+        <div class="navbar bg-base-100">
+   <div class="navbar-start">
+            <div class="flex items-center justify-center">
+              <img class="lg:w-10" src="./images/logo.webp" alt="" />
+              <a
+                class="btn btn-ghost text-xl md:font-black md:text-2xl lg:text-3xl text-text1"
+                >Peddy</a
+              >
+            </div>
+          </div>
+  <div class="navbar-center hidden md:flex">
+            <ul class="menu menu-horizontal px-1 lg:text-xl">
+              <li><a>Home</a></li>
+              <li><a href="">Shop</a></li>
+
+              <li><a>Contact </a></li>
+            </ul>
+          </div>
+  <div class="navbar-end">
+      <img
+              class="w-8 mr-2 md:mr-0 md:w-10 lg:w-12"
+              src="./images/Frame 4.png"
+              alt=""
+            />
+  </div>
+  <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content    bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-2">
+        <li><a>Home</a></li>
+        <li><a>Shop</a></li>        
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+</div>
+    </nav>
+     <!-- banner section start here -->
+      <section
+        class="flex flex-col justify-center items-center text-center mt-12"
+      >
+        <div class="border-2">
+          <h5 class="text-xl md:text-2xl font-medium text-text2">
+            Bringing Families Together ❤️‍🔥
+          </h5>
+          <h1
+            class="text-center text-text1 text-3xl md:text-4xl lg:text-6xl font-extrabold mt-2 md:mt-6 xl:mt-8 leading-tight"
+          >
+            Your Path to Adoption <br />
+            Starts Here
+          </h1>
+
+          <p class="mt-2 md:mt-4 text-text2 px-2 md:px-0 xl:text-xl">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking
+            <br class="hidden md:block" />
+            at its layout. The point of using Lorem Ipsum is that it has a.
+          </p>
+          <a href="#viewMore">
+            <button
+              class="btn mt-2 md:mt-4 md:text-lg xl:text-xl md:font-semibold xl:font-bold bg-primary hover:bg-primary text-white text-center"
+            >
+              View More
+            </button>
+          </a>
+        </div>
+
+        <div class="border-2 mt-4 lg:mt-6">
+          <img
+            class="w-11/12 lg:w-full mx-auto"
+            src="./images/pet.webp"
+            alt=""
+          />
+        </div>
+      </section>
+  </header>
+
+    <!-- main section start here -->
+    <main class="container mx-auto mt-10">
+      <section>
+        <div class="border-2 md:w-1/2 mx-auto">
+          <h3
+            id="viewMore"
+            class="text-center text-2xl md:text-3xl font-bold lg:text-4xl lg:font-extrabold"
+          >
+            Adopt Your Best Friend
+          </h3>
+          <p class="text-center text-text2 mt-2 md:mt-4">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </p>
+        </div>
+
+        <!-- cetagory 4 btn -->
+        <div id="category-btn" class="grid grid-cols-4 gap-4 mt-10"></div>
+       
+        <!-- text and sort btn -->
+        <div class="flex justify-between items-center mt-4">
+          <h3 class="text-2xl font-bold">Best Deal For you</h3>
+          <button id="sortedProductBtn" onclick="sortedProducts()"
+            class=" md:w-auto btn mt-2 border-none outline-none md:mt-4 md:text-lg xl:text-xl md:font-semibold xl:font-bold bg-primary px-10 hover:bg-primary text-white text-center"
+          >
+            Sort by Price
+          </button>
+        </div>
+
+
+<!-- spinner section -->
+   <div id="spinner"
+                class=" text-center hidden w-[80%] h-[200px] transform translate-x-[0%] md:translate-x-[30%]  justify-center items-center ">
+               <span class="loading loading-spinner loading-xs"></span>
+<span class="loading loading-spinner loading-sm"></span>
+<span class="loading loading-spinner loading-md"></span>
+<span class="loading loading-spinner loading-lg"></span>
+            </div>
+            
+
+
+        <!-- cards container  -->
+        <div class="grid items-start grid-cols-12 mt-8 gap-6">
+          <div
+            id="all-pets"
+            class="col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          ></div>
+          <div
+            id="hidden-box"
+            class="bg-blue-4000 h-[500px] hidden col-span-9 rounded-xl flex flex-col justify-center items-center"
+          >
+            <img class="" src="./images/error.webp" alt="" />
+            <h3 class="md:text-3xl font-bold py-4">No Information Available</h3>
+            <p class="md:w-10/12 text-center">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a.
+            </p>
+          </div>
+
+          <!--right side cards container  -->
+          <div  id="like-img-box" class="border-2  col-span-3 min-h-32 grid grid-cols-2  rounded-xl">
+            
+
+          </div>
+
+        </div>
+
+        <!-- count modal box start -->
+          <div class=" fixed hidden mx-auto z-10 w-full h-[130vh] bg-[rgba(0,0,0,0.7)]  flex justify-center  items-center top-0"
+            id="countdown_container">
+
+            <div
+                class="card bg-neutral relative text-neutral-content w-96  h-[300px] bg-[white] text-[black] transform ">
+                <div class="card-body items-center text-center">
+                    <img src="./images/icons8-handshake-64.png" alt="" class="w-[50px] h-[50px] object-cover rounded-full border-[2px]">
+                    <h2 class="card-title">Congrates!</h2>
+                    <p>adoption proccess is for your pet !</p>
+                    <p id="countdown" class="text-3xl font-bold ">3</p>
+                </div>
+            </div>
+        </div>
+       
+        <!-- count modal box end -->
+        
+        <!--  -->
+        <!-- details modal -->
+         <div id="adoptModal" class="hidden overflow-scroll fixed inset-0  bg-black bg-opacity-50 flex justify-center items-center">
+  <div class="  w-11/12 md:w-6/12 2xl:w-6/12  rounded-lg p-6 relative">
+    <span id="closeModal"></span>
+    <div id="modalContent" class="space-y-4">
+      <!-- Pet details will be inserted here dynamically -->
+    </div>
+   
+  </div>
+</div> 
+<!--  -->
+
+
+      </section>
+    </main>
+    
+
+    <!-- footer section start here  -->
+    <footer class="bg-[#131313] mt-10">
+      <div class="container mx-auto py-4 md:py-6">
+        <footer
+          class="footer flex flex-col md:flex-row justify-between text-neutral-content p-10"
+        >
+         
+          <nav class="text-[#e6e6e6d4] leading-5 w-full md:w-auto  flex  flex-col justify-center items-center md:items-start">
+            <div class="flex items-center justify-center mb-3">
+              <img class="lg:w-10" src="./images/logo.webp" alt="" />
+              <a
+                class="btn btn-ghost text-xl md:font-black md:text-2xl lg:text-3xl text-white"
+                >Peddy</a
+              >
+            </div>
+
+            <a class="link link-hover"
+              >Location: at.Bhairav 2350. Kishorgonj 2300</a
+            >
+            <a class="link link-hover">Phone: +8801636550601</a>
+            <a class="link link-hover">Email:arman.miaa36@gmail.com</a>
+            <a class="link link-hover">Openings hours: 8.00 am - 6.00 pm</a>
+
+            <div class="flex items-center justify-center gap-2 mt-2">
+              <a href=""
+                ><img src="./images/icons8-facebook-48.png" alt=""
+              /></a>
+
+              <a href=""><img src="./images/Vector.png" alt="" /></a>
+
+              <a href=""><img src="./images/icons8-youtube-48.png" alt="" /></a>
+              <a href=""
+                ><img src="./images/icons8-instagram-48.png" alt=""
+              /></a>
+            </div>
+          </nav>
+
+         
+          <nav class="text-text3 leading-5 mx-auto">
+            <h6 class="text-white mb-3">Useful lInks</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About Us</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Foundation</a>
+            <a class="link link-hover">Contact</a>
+          </nav>
+
+         
+          <nav class="w-full md:w-auto">
+            <h6 class="mx-auto md:ml-0">Drop a Message</h6>
+            <input
+              class="w-full md:w-auto p-3 rounded-lg bg-[#ffffff3b]"
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter your email"
+            />
+            <button
+              class="w-full md:w-auto btn mt-2 border-none outline-none md:mt-4 md:text-lg xl:text-xl md:font-semibold xl:font-bold bg-primary px-10 hover:bg-primary text-white text-center"
+            >
+              Subscribe
+            </button>
+          </nav>
+        </footer>
+      </div>
+    </footer>
+    <!-- footer section end here  -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
